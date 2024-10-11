@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ELEIÇOES 2024 - REGISTRO SP</title>
+
+		<link rel="stylesheet" type="text/css" href="javascript/style.css" />
+		<link rel="stylesheet" type="text/css" href="leaflet/leaflet.css"/>
+
+		<script type="text/javascript" src="leaflet/leaflet.js"></script>
+		<script type="text/javascript" src="javascript/tab.js"></script>
+
+		<!-- Caminhos paras os dados das camadas -->
+		<script type="text/javascript" src="data/_Secoes_Eleitorais_de_Registro.js"></script>
+		<script type="text/javascript" src="data/_Logradouros.js"></script>
+		<script type="text/javascript" src="data/_Limites_Municipais.js"></script>
+	</head>
+	<body>
+		<div class="title">
+			<h1>ELEIÇOES 2024 - REGISTRO SP</h1>
+		</div>
+		<div class="maintab">
+			<button id="mapBtn" class="mainTablinks" onclick="openMainTab(event, 'mapArea')">Mapa</button>
+			<button class="mainTablinks" onclick="openMainTab(event, 'attributesArea')">Tabelas de Atributos</button>
+		</div>
+		<div id="mapArea" class="mainTabContent">
+			<div id="map"></div>
+		</div>
+
+		<div id="attributesArea" class="mainTabContent">
+			<div class="tab">
+				<button id="_Secoes_Eleitorais_de_Registro_btn" class="tablinks" onclick="openTab(event, '_Secoes_Eleitorais_de_Registro_tab')">Secoes Eleitorais de Registro</button>
+			</div>
+			<div id="_Secoes_Eleitorais_de_Registro_tab" class="tabcontent"></div>
+		</div>
+		<script type="text/javascript" src="javascript/map.js"></script>
+		<script type="text/javascript" src="javascript/attributes.js"></script>
+		<script>document.getElementById('mapBtn').click();</script>	</body>
+</html>
